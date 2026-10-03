@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Signals — Onion Lab</title><link rel="stylesheet" href="style.css?v=3"></head>
+<body data-lang="both" class="scope">
+<header class="top"><div class="top-in">
+<a class="mark" href="index.html"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="#d7ff3e" stroke="#111309" stroke-width="2.5"/><path d="M20 6 C12 14 10 24 20 34 C30 24 28 14 20 6Z" fill="none" stroke="#111309" stroke-width="2.5"/></svg><span><b>TEAM ONION · SIGNAL LAB</b><small>02 · SIGNALS</small></span></a>
+<nav class="pages"><a href="index.html">Intro</a><a href="analog-digital.html">Signals</a><a href="lab.html">Lab</a><a href="binary.html">Binary</a><a href="converters.html">ADC·DAC</a><a href="transmission.html">Transmit</a><a href="quiz.html">Quiz</a><a href="exam.html">Exam</a></nav>
+<div class="tools"><div class="searchwrap"><input id="sin" type="search" placeholder="search…" aria-label="Search"><div id="sdrop"></div></div><div class="lang"><button data-l="en">EN</button><button data-l="both" class="on">EN+NE</button><button data-l="ne">NE</button></div><button class="iconbtn" id="themeBtn" title="Toggle scope/paper mode" aria-label="Toggle dark mode">◐</button></div>
+</div></header>
+<div class="wrap">
+<div class="panel"><span class="fig">FIG.02 — ANALOG</span><h2>Analog: the smooth one <span class="thin">〰</span></h2>
+<div class="grid2"><div>
+<div class="en"><b>Changes continuously.</b> Any value inside the range is allowed — not just two steps. Drawn as a smooth sine wave. Think natural voice, old radio.</div>
+<div class="ne">समयसँग <b>लगातार परिवर्तन</b> हुन्छ। range भित्र जुनसुकै मान हुन सक्छ। smooth sine wave मा देखाइन्छ — जस्तै प्राकृतिक आवाज।</div>
+<div class="stickers"><span class="st go">CONTINUOUS</span><span class="st">PEAK = top (+V)</span><span class="st">VALLEY = bottom (−V)</span><span class="st">AMPLITUDE = height = strength</span></div>
+<p class="small">Zero line in the middle. Above = positive voltage, below = negative. Bigger swing = louder / stronger.</p>
+</div><div class="darkbox"><canvas id="anaScope"></canvas><p class="small" style="color:#b9bd9c">PEAK / VALLEY / AMPLITUDE / TIME — all on one wave.</p></div></div></div>
+
+<div class="panel"><span class="fig">FIG.03 — DIGITAL</span><h2>Digital: the stepped one <span class="thin">▓</span></h2>
+<div class="en"><b>Fixed levels only.</b> Usually two: HIGH = 1, LOW = 0. Waveform is square steps, not smooth. That's what computers eat.</div>
+<div class="ne">मान <b>fixed/discrete</b> मात्र — HIGH = 1, LOW = 0। Wave square-step हुन्छ। कम्प्युटरले यही बुझ्छ।</div>
+<div class="bulbring"><div style="text-align:center"><div class="bulb" id="bulb">💡</div><div id="bstate" style="font-family:var(--mono);font-size:13px;margin-top:8px">OFF — LOW / 0 · 0V</div><canvas id="bulbScope" style="width:180px;height:60px;margin-top:8px"></canvas></div>
+<div><b>Try it: the Onion switch</b><p class="small" style="color:#b9bd9c">थिच्नुहोस् — बत्ती, भोल्टेज, binary, wave सबै सँगै बदलिन्छ।</p><button class="sw" id="sw" role="switch" aria-checked="false" aria-label="Toggle"></button><p style="font-family:var(--mono);font-size:13px">OFF = 0V = 0 · ON = 5V = 1</p></div></div></div>
+
+<div class="panel"><span class="fig">FIG.04 — HEAD TO HEAD</span><h2>Knob vs switch</h2>
+<div class="grid2">
+<div class="darkbox">ANALOG — dimmer / volume knob<canvas id="cmpA"></canvas><p class="small" style="color:#b9bd9c">Bिस्तारै घुम्छ — continuous change.</p></div>
+<div class="darkbox">DIGITAL — wall switch<canvas id="cmpD"></canvas><p class="small" style="color:#b9bd9c">कि बल्छ कि निभ्छ — discrete levels.</p></div>
+</div>
+<div style="overflow:auto;margin-top:12px"><table>
+<tr><th>#</th><th>Analog</th><th>Digital</th></tr>
+<tr><td>Meaning</td><td>Continuously varying / लगातार</td><td>Discrete levels, usually 0/1</td></tr>
+<tr><td>Values</td><td>Infinite in range</td><td>Two: HIGH / LOW</td></tr>
+<tr><td>Wave</td><td>Smooth sine 〰</td><td>Square steps ▓</td></tr>
+<tr><td>Noise</td><td>Distorts directly — damage sticks</td><td>Regenerable — errors detectable/fixable</td></tr>
+<tr><td>Store / process</td><td>Hard (tape), analog circuits</td><td>Easy (files), computers</td></tr>
+<tr><td>Examples</td><td>Voice, old radio/phone</td><td>PC, phone, MP3, digital TV</td></tr>
+<tr><td>Convert</td><td>→ digital needs ADC</td><td>→ analog needs DAC</td></tr>
+</table></div>
+<p><a class="btn solid" href="lab.html">Touch the waves in the Lab →</a></p></div>
+</div>
+<footer><b>TEAM ONION</b> · smooth vs stepped — that's 50% of the exam.</footer>
+<script src="app.js?v=7"></script></body></html>
