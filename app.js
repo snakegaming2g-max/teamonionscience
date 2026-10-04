@@ -1,7 +1,7 @@
 // ONION ACADEMY v3 — portal engine. Vanilla, offline-first.
 (function(){
 "use strict";
-try{window.__engine='v7';window.__errs=[];
+try{window.__engine='v8';window.__errs=[];
 window.__renderErr=function(){try{var errs=window.__errs;var b=document.getElementById('engbadge');if(!b||!errs.length)return;var e=errs[errs.length-1];var loc=((e.f||'').split('/').pop()||'?')+':'+(e.l||'?')+':'+(e.c||'?');
 var ext=(e.m==='Script error.'&&!e.f&&!e.l&&!e.c);
 b.style.cssText='position:fixed;left:8px;bottom:8px;z-index:200;background:'+(ext?'#7a5410':'#c22e2e')+';color:#fff;font:700 11px/1.5 monospace;padding:8px 12px;border-radius:8px;max-width:92vw;cursor:pointer;white-space:pre-wrap;word-break:break-all';
@@ -151,7 +151,7 @@ $$('.lvl').forEach(card=>{
  const tag=$('.status',card);
  const paint=()=>{card.classList.toggle('locked',locked&&!doneLv[id]);card.classList.toggle('done',!!doneLv[id]);
    if(tag)tag.textContent=doneLv[id]?'DONE':(locked?'LOCKED':'OPEN');
-   const btn=$('[data-open]',card);if(btn)btn.textContent=doneLv[id]?'Review level':(locked?'Locked':'Start mission');btn.disabled=locked&&!doneLv[id];};
+   const btn=$('[data-open]',card);if(btn){btn.textContent=doneLv[id]?'Review level':(locked?'Locked':'Start mission');btn.disabled=locked&&!doneLv[id];}};
  paint();
  $('[data-open]',card)?.addEventListener('click',()=>{if(locked&&!doneLv[id]){toast('Finish the previous level first.');return;}card.classList.toggle('open');});
  // build gate quiz
