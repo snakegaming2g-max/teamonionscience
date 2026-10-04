@@ -1,24 +1,38 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Waveform Lab — Onion Lab</title><link rel="stylesheet" href="style.css?v=3"></head>
-<body data-lang="both" class="scope">
+<title>Lab — Onion Signal Lab</title><link rel="stylesheet" href="style.css?v=7"></head>
+<body data-lang="both">
 <header class="top"><div class="top-in">
-<a class="mark" href="index.html"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="#d7ff3e" stroke="#111309" stroke-width="2.5"/><path d="M20 6 C12 14 10 24 20 34 C30 24 28 14 20 6Z" fill="none" stroke="#111309" stroke-width="2.5"/></svg><span><b>TEAM ONION · SIGNAL LAB</b><small>03 · WAVEFORM LAB</small></span></a>
-<nav class="pages"><a href="index.html">Intro</a><a href="analog-digital.html">Signals</a><a href="lab.html">Lab</a><a href="binary.html">Binary</a><a href="converters.html">ADC·DAC</a><a href="transmission.html">Transmit</a><a href="quiz.html">Quiz</a><a href="exam.html">Exam</a></nav>
-<div class="tools"><div class="searchwrap"><input id="sin" type="search" placeholder="search…"><div id="sdrop"></div></div><div class="lang"><button data-l="en">EN</button><button data-l="both" class="on">EN+NE</button><button data-l="ne">NE</button></div><button class="iconbtn" id="themeBtn" title="Toggle scope/paper mode" aria-label="Toggle dark mode">◐</button></div>
+<a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#d7ff3e" stroke="#16140b" stroke-width="2.5"/><path d="M20 6 C12 14 10 24 20 34 C30 24 28 14 20 6Z" fill="none" stroke="#16140b" stroke-width="2.5"/><path d="M20 12 C15 18 14 25 20 30" fill="none" stroke="#e14d1f" stroke-width="2.5"/></svg><span><b>ONION SIGNAL LAB</b><small>BENCH / HANDS-ON</small></span></a>
+<nav class="pages"><a href="index.html">Home</a><a href="learn.html">Notes</a><a href="levels.html">Levels</a><a href="lab.html">Lab</a><a href="quiz.html">Quiz</a><a href="exam.html">Exam</a></nav>
+<div class="top-right"><div class="xp-pill">XP <i id="xpVal">0 XP</i><span id="rankVal"></span></div>
+<div class="searchwrap"><input id="sin" type="search" placeholder="search…"><div id="sdrop"></div></div>
+<div class="lang"><button data-l="en">EN</button><button data-l="both" class="on">EN+NE</button><button data-l="ne">NE</button></div></div>
 </div></header>
 <div class="wrap">
-<div class="panel"><span class="fig">FIG.05 — THE BENCH</span><h2>Waveform lab</h2>
-<p class="small">Same bench engineers use. Three modes, three knobs. Watch what each knob actually does.</p>
-<div class="seg"><button data-t="analog" class="on">ANALOG 〰</button><button data-t="digital">DIGITAL ▓</button><button data-t="both">BOTH</button></div>
+<div class="panel"><span class="fig">THE BENCH — SAME AS ENGINEERS USE</span><h2>Waveform Lab <span class="thin">move one knob at a time</span></h2>
+<div class="tabs"><button class="tabbtn on" data-tab="waves">WAVES</button><button class="tabbtn" data-tab="bits">BITS</button><button class="tabbtn" data-tab="compare">KNOB vs SWITCH</button></div>
+<div data-pane="waves">
+<div class="seg"><button data-t="analog" class="on">ANALOG</button><button data-t="digital">DIGITAL</button><button data-t="both">BOTH</button></div>
 <div class="toolbar"><label>FREQ <input type="range" id="f" min="1" max="6" step="0.5" value="2"></label><label>AMPL <input type="range" id="a" min="20" max="90" value="55"></label><label>SPEED <input type="range" id="s" min="1" max="5" step="0.5" value="2.2"></label></div>
-<div class="knobs"><button type="button" class="knobbtn" data-hear="sine" data-label="♪ HEAR ANALOG">♪ HEAR ANALOG</button><button type="button" class="knobbtn" data-hear="square" data-label="♪ HEAR DIGITAL">♪ HEAR DIGITAL</button><button type="button" class="knobbtn" id="freeze">❚❚ FREEZE</button></div>
-<div class="darkbox"><canvas class="screen" id="labScope" style="height:250px"></canvas>
-<div class="scope-cap"><span>PEAK · VALLEY · AMPL · TIME · HIGH · LOW</span><span id="labval">f=2</span></div></div>
-<div class="grid2" style="margin-top:12px"><div class="en"><b>Freq</b> = how many cycles per second. Turn it up → wave gets crowded. <b>Ampl</b> = height = strength.</div>
-<div class="ne"><b>Frequency</b> बढ्दा छिटो दोहोरिन्छ। <b>Amplitude</b> बढ्दा तरंग अग्लो हुन्छ — बलियो सिग्नल।</div></div>
-<p><a class="btn light" href="binary.html">Got waves? → meet bits</a></p></div>
+<div class="knobs"><button type="button" class="knobbtn" data-hear="sine" data-label="HEAR ANALOG">HEAR ANALOG</button><button type="button" class="knobbtn" data-hear="square" data-label="HEAR DIGITAL">HEAR DIGITAL</button><button type="button" class="knobbtn" id="freeze">FREEZE</button></div>
+<div class="darkbox"><canvas class="screen" id="labScope" style="height:260px"></canvas>
+<div class="scope-cap"><span>PEAK / VALLEY / AMPL / TIME / HIGH / LOW</span><span>f=2, a=55</span></div></div>
+<div class="grid2" style="margin-top:12px"><div class="en"><b>Freq</b> is cycles per second. Raise it and the wave crowds. <b>Ampl</b> is height — height is strength.</div><div class="ne"><b>Frequency</b> बढ्दा छिटो दोहोरिन्छ। <b>Amplitude</b> बढ्दा तरंग अग्लो — बलियो सिग्नल।</div></div>
 </div>
-<footer><b>TEAM ONION</b> · lab rule: wiggle one knob at a time.</footer>
-<script src="app.js?v=7"></script>
-<script>addEventListener('input',e=>{const v=document.getElementById('labval');if(v)v.textContent='f='+document.getElementById('f').value+' · a='+document.getElementById('a').value;});</script>
-</body></html>
+<div data-pane="bits" style="display:none">
+<h3>Four-bit explorer — build the number</h3>
+<div class="bits" id="bitsLab"><button class="bit">0</button><button class="bit">0</button><button class="bit">0</button><button class="bit">0</button></div>
+<div><span class="readout">BIN <span id="boutLab">0000</span> / DEC <span id="doutLab">0</span> / 2^4 = 16</span></div>
+<p class="small">Drill: make <b>5, then 10, then 15, then 7</b>. Weights 8, 4, 2, 1.</p>
+</div>
+<div data-pane="compare" style="display:none">
+<div class="grid2"><div class="darkbox">ANALOG — dimmer<canvas id="cmpA"></canvas></div>
+<div class="darkbox">DIGITAL — wall switch<canvas id="cmpD"></canvas></div></div>
+<p class="small">Gradual turn is continuous. On-or-off is discrete.</p>
+</div>
+<p style="margin-top:14px"><a class="btn solid" href="levels.html">Back to Levels</a></p>
+</div>
+</div>
+<div id="toast" role="status"></div>
+<footer><b>ONION SIGNAL LAB</b> / touch first, memorise second</footer>
+<script src="app.js?v=7"></script></body></html>

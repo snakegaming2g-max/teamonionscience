@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Levels — Onion Signal Lab</title><link rel="stylesheet" href="style.css?v=7"></head>
+<body data-lang="both">
+<header class="top"><div class="top-in">
+<a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#d7ff3e" stroke="#16140b" stroke-width="2.5"/><path d="M20 6 C12 14 10 24 20 34 C30 24 28 14 20 6Z" fill="none" stroke="#16140b" stroke-width="2.5"/><path d="M20 12 C15 18 14 25 20 30" fill="none" stroke="#e14d1f" stroke-width="2.5"/></svg><span><b>ONION SIGNAL LAB</b><small>LEVELS / STEP 02</small></span></a>
+<nav class="pages"><a href="index.html">Home</a><a href="learn.html">Notes</a><a href="levels.html">Levels</a><a href="lab.html">Lab</a><a href="quiz.html">Quiz</a><a href="exam.html">Exam</a></nav>
+<div class="top-right"><div class="xp-pill">XP <i id="xpVal">0 XP</i><span id="rankVal"></span></div>
+<div class="searchwrap"><input id="sin" type="search" placeholder="search…"><div id="sdrop"></div></div>
+<div class="lang"><button data-l="en">EN</button><button data-l="both" class="on">EN+NE</button><button data-l="ne">NE</button></div></div>
+</div></header>
+<div class="wrap">
+<div class="panel"><span class="fig">STEP 02 — PLAY TO LEARN</span><h2>Six Levels <span class="thin">briefing / task / gate — <span id="lvlCount">0 / 6 levels</span></span></h2>
+<p class="small">Levels unlock <b>in order</b>. Open a level, read the briefing, do the hands-on task, then pass all 3 gate questions. Full clear earns XP and the next unlock. If a gate feels hard, re-read its Notes chapter first.</p>
+<div class="bar"><div class="bar-fill" id="pathfill"></div></div><div class="progress-row"><span>MISSION PROGRESS</span><span id="pathPct">0%</span></div>
+</div>
+
+<div class="panel lvl" data-level="L1">
+<span class="status">OPEN</span><span class="fig">LEVEL 01 / +100 XP / SIGNAL</span><h2>What is a signal?</h2>
+<div class="mission"><b>Briefing.</b> Explain “signal” in one line: <i>change over time that carries information.</i> समयसँग बदलिने + सूचना = सिग्नल।</div>
+<div class="level-play"><p class="small"><b>Task.</b> Recite the chain aloud: INFO — SIGNAL — TRAVEL — RECEIVE — INFO. Then pass the gate, 3 of 3.</p><div data-gate></div><p data-gatemsg></p>
+<p><a class="btn paper" href="learn.html#c1">Re-read Ch.1</a></p></div>
+<p><button class="btn solid" data-open>Start mission</button></p>
+</div>
+
+<div class="panel lvl" data-level="L2">
+<span class="status">LOCKED</span><span class="fig">LEVEL 02 / +120 XP / ANALOG</span><h2>Smooth operator</h2>
+<div class="mission"><b>Briefing.</b> Own peak, valley, amplitude, frequency. <b>Task.</b> Open <a href="lab.html">Lab / Waves</a>, select ANALOG, drag FREQ then AMPL, and state what each knob changes.</div>
+<div class="level-play"><div data-gate></div><p data-gatemsg></p><p><a class="btn paper" href="learn.html#c2">Re-read Ch.2</a></p></div>
+<p><button class="btn solid" data-open>Start mission</button></p>
+</div>
+
+<div class="panel lvl" data-level="L3">
+<span class="status">LOCKED</span><span class="fig">LEVEL 03 / +120 XP / DIGITAL</span><h2>King of steps</h2>
+<div class="mission"><b>Briefing.</b> Own HIGH = 1 and LOW = 0. <b>Task.</b> Operate the switch on <a href="learn.html#c3">Notes Ch.3</a> five times, calling out voltage and bit each time (OFF = 0V = 0, ON = 5V = 1).</div>
+<div class="level-play"><div data-gate></div><p data-gatemsg></p><p><a class="btn paper" href="learn.html#c3">Re-read Ch.3</a></p></div>
+<p><button class="btn solid" data-open>Start mission</button></p>
+</div>
+
+<div class="panel lvl" data-level="L4">
+<span class="status">LOCKED</span><span class="fig">LEVEL 04 / +150 XP / BINARY</span><h2>Bit flipper</h2>
+<div class="mission"><b>Briefing.</b> Build decimals from bits. <b>Task.</b> Use the explorer below — first make <b>5 (0101)</b>, then <b>10 (1010)</b>. Weights: 8, 4, 2, 1.</div>
+<div class="level-play">
+<div class="bits" id="bitsL4"><button class="bit">0</button><button class="bit">0</button><button class="bit">0</button><button class="bit">0</button></div>
+<div><span class="readout">BIN <span id="boutL4">0000</span> / DEC <span id="doutL4">0</span></span></div>
+<p class="small">Exam rule: <b>n bits give 2n patterns</b>. 3 bits give 8 (000–111).</p>
+<div data-gate></div><p data-gatemsg></p><p><a class="btn paper" href="learn.html#c4">Re-read Ch.4</a></p></div>
+<p><button class="btn solid" data-open>Start mission</button></p>
+</div>
+
+<div class="panel lvl" data-level="L5">
+<span class="status">LOCKED</span><span class="fig">LEVEL 05 / +150 XP / CONVERTERS</span><h2>Bridge keeper</h2>
+<div class="mission"><b>Briefing.</b> Never swap ADC and DAC again. <b>Rule.</b> ADC = A to D = record IN. DAC = D to A = play OUT. Recite it three times, then pass the gate.</div>
+<div class="level-play"><div data-gate></div><p data-gatemsg></p><p><a class="btn paper" href="learn.html#c5">Re-read Ch.5</a></p></div>
+<p><button class="btn solid" data-open>Start mission</button></p>
+</div>
+
+<div class="panel lvl" data-level="L6">
+<span class="status">LOCKED</span><span class="fig">LEVEL 06 / +160 XP / TRANSMIT</span><h2>Noise survivor</h2>
+<div class="mission"><b>Briefing.</b> Trace one phone call: SOURCE — ENCODE — CHANNEL — DECODE — EAR. <b>Final question.</b> Why does digital survive noise? Answer: <i>it regenerates and error-checks.</i></div>
+<div class="level-play"><div data-gate></div><p data-gatemsg></p><p><a class="btn paper" href="learn.html#c6">Re-read Ch.6</a></p></div>
+<p><button class="btn solid" data-open>Start mission</button></p>
+</div>
+
+<div class="panel"><span class="fig lime">ALL SIX CLEAR?</span><h2>Claim the exam</h2>
+<p class="small">Six of six unlocks the 15-minute timed Final with certificate. Warm up in the Quiz first if you want.</p>
+<p><a class="btn solid" href="exam.html" id="examGate">Final Exam</a> <a class="btn paper" href="quiz.html">Practice Quiz</a></p></div>
+</div>
+<div id="stamp" aria-hidden="true"><span id="stampTxt">CORRECT</span></div><div id="toast" role="status"></div>
+<footer><b>ONION SIGNAL LAB</b> / 800 XP on the table</footer>
+<script src="app.js?v=7"></script></body></html>

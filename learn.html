@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notes — Onion Signal Lab</title><link rel="stylesheet" href="style.css?v=7"></head>
+<body data-lang="both">
+<header class="top"><div class="top-in">
+<a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#d7ff3e" stroke="#16140b" stroke-width="2.5"/><path d="M20 6 C12 14 10 24 20 34 C30 24 28 14 20 6Z" fill="none" stroke="#16140b" stroke-width="2.5"/><path d="M20 12 C15 18 14 25 20 30" fill="none" stroke="#e14d1f" stroke-width="2.5"/></svg><span><b>ONION SIGNAL LAB</b><small>NOTES / STEP 01</small></span></a>
+<nav class="pages"><a href="index.html">Home</a><a href="learn.html">Notes</a><a href="levels.html">Levels</a><a href="lab.html">Lab</a><a href="quiz.html">Quiz</a><a href="exam.html">Exam</a></nav>
+<div class="top-right"><div class="xp-pill">XP <i id="xpVal">0 XP</i><span id="rankVal"></span></div>
+<div class="searchwrap"><input id="sin" type="search" placeholder="search…"><div id="sdrop"></div></div>
+<div class="lang"><button data-l="en">EN</button><button data-l="both" class="on">EN+NE</button><button data-l="ne">NE</button></div></div>
+</div></header>
+<div class="wrap">
+<div class="panel"><span class="fig">STEP 01 — READ BEFORE YOU PLAY</span><h2>Full Notes <span class="thin">6 chapters / EN + NE / exam-ready</span></h2>
+<p class="small">Read top to bottom. Mark each chapter done only when you could explain it aloud (<span id="noteCount">0 / 6 notes</span>). Every level gate is drawn from these pages.</p>
+<div class="bar"><div class="bar-fill" id="pathfill"></div></div></div>
+<div class="learn-layout">
+<nav class="toc"><b>CONTENTS</b>
+<a href="#c1">Ch.1 What is a signal?</a><a href="#c2">Ch.2 Analog — smooth</a><a href="#c3">Ch.3 Digital — steps</a><a href="#c4">Ch.4 Binary + bits</a><a href="#c5">Ch.5 ADC / DAC</a><a href="#c6">Ch.6 Transmission</a><a href="#c7">Exam table + strip</a>
+</nav>
+<div>
+<section class="chapter" id="c1"><span class="fig">CHAPTER 1 / LEVEL 01</span><h3>What is a signal?</h3>
+<div class="en"><b>A signal is a physical quantity that changes with time and carries information.</b> Your voice shakes air — that shaking pattern <i>is</i> the signal. Voltage in a wire and brightness of light behave the same way: change over time, with a message inside.</div>
+<div class="ne">सिग्नल भनेको <b>समयसँग परिवर्तन हुने र सूचना बोक्ने भौतिक परिमाण</b> हो। बोलेको आवाजले हावा हल्लाउँछ — त्यही pattern नै सिग्नल हो। तारको भोल्टेज वा बत्तीको उज्यालो पनि त्यस्तै हो।</div>
+<div class="kv"><div><b>WHY IT EXISTS</b>Information must travel. The signal is the vehicle. सूचना पुर्‍याउन सिग्नल चाहिन्छ।</div><div><b>FOUR EXAMPLES</b>Sound (air pressure) — Voltage (wire level) — Light (brightness) — Radio wave (shaped EM field).</div><div><b>RULE 01</b>If nothing changes with time, it is not a signal. It is a value sitting still.</div></div>
+<div class="chain"><span>INFO</span><span>TO SIGNAL</span><span>TRAVEL</span><span>RECEIVE</span><span>INFO BACK</span></div>
+<div class="darkbox"><canvas id="chainScope"></canvas><p class="small" style="color:#a09a83">Every signal is a wiggle over time. A flat line is dead air.</p></div>
+<div class="exam-tip"><b>Exam line:</b> “What is a signal?” — <i>Time-varying physical quantity carrying information.</i> Add one example (voice, voltage).</div>
+<p><button class="btn solid" data-note-done="c1">Mark note done</button></p></section>
+
+<section class="chapter" id="c2"><span class="fig">CHAPTER 2 / LEVEL 02</span><h3>Analog — the smooth one</h3>
+<div class="en"><b>Analog changes continuously.</b> Any value inside the range is allowed — not just two steps. It is drawn as a <b>smooth sine wave</b>: natural voice, old radio, a volume knob, a dimmer.</div>
+<div class="ne">अनालग <b>लगातार परिवर्तन</b> हुन्छ — range भित्र जुनसुकै मान। <b>Smooth sine wave</b> मा देखाइन्छ — प्राकृतिक आवाज, पुरानो रेडियो।</div>
+<div class="kv"><div><b>PEAK</b>Top of the wave (+V). The highest point of the swing.</div><div><b>VALLEY</b>Bottom of the wave (−V). The lowest point.</div><div><b>AMPLITUDE</b>Height from the middle line. Taller means stronger / louder.</div><div><b>FREQUENCY</b>Cycles per second. Faster repetition means higher frequency.</div></div>
+<div class="darkbox"><canvas id="anaScope"></canvas><p class="small" style="color:#a09a83">Peak, valley, amplitude — all on one wave.</p></div>
+<div class="myth"><b>Common error:</b> “Analog means old or broken.” It does not. Analog means <i>continuous</i> — a brand-new temperature sensor is still analog.</div>
+<div class="exam-tip"><b>Exam line:</b> draw a sine wave; label time axis, amplitude, peak, valley. Example: human voice.</div>
+<p><button class="btn solid" data-note-done="c2">Mark note done</button></p></section>
+
+<section class="chapter" id="c3"><span class="fig">CHAPTER 3 / LEVEL 03</span><h3>Digital — the stepped one</h3>
+<div class="en"><b>Digital allows fixed levels only</b> — usually two: <b>HIGH = 1, LOW = 0</b>. Its waveform is <b>square steps</b>, never smooth. This is the only language computers speak.</div>
+<div class="ne">डिजिटलमा <b>fixed मान मात्र</b> — HIGH = 1, LOW = 0। Wave <b>square-step</b> हुन्छ। कम्प्युटरले यही बुझ्छ।</div>
+<div class="bulbring"><div style="text-align:center"><div class="bulb" id="bulb"></div><div id="bstate" style="font-family:var(--mono);font-size:12.5px;margin-top:8px">OFF — LOW / 0, 0V</div><canvas id="bulbScope" style="width:180px;height:60px;margin-top:8px"></canvas></div>
+<div><b>Test rig: the switch</b><p class="small" style="color:#a09a83">Operate it — lamp, voltage, binary value and waveform change together.</p><button class="sw" id="sw" role="switch" aria-checked="false" aria-label="Toggle"></button><p style="font-family:var(--mono);font-size:12.5px">OFF = 0V = 0 / ON = 5V = 1</p></div></div>
+<div class="kv"><div><b>KNOB VS SWITCH</b>Analog is a dimmer (gradual). Digital is a wall switch (on or off).</div><div><b>WHY DIGITAL WON</b>Easy to store, copy exactly, regenerate and error-check.</div><div><b>THE COST</b>It needs ADC and DAC to talk to the smooth real world.</div></div>
+<div class="exam-tip"><b>Exam line:</b> draw a square wave; label HIGH/1, LOW/0, time. Example: computer data, MP3.</div>
+<p><button class="btn solid" data-note-done="c3">Mark note done</button></p></section>
+
+<section class="chapter" id="c4"><span class="fig">CHAPTER 4 / LEVEL 04</span><h3>Binary — only 0 and 1</h3>
+<div class="en">One binary digit is <b>1 bit</b>. Eight bits make <b>1 byte</b>. The golden exam rule: <b>n bits give 2n combinations.</b> 1 bit: 2. 2 bits: 4. 3 bits: 8. 4 bits: 16.</div>
+<div class="ne">एउटा अंक = <b>1 bit</b>। 8 bit = <b>1 byte</b>। <b>n bit, 2n वटा संयोजन।</b></div>
+<h4>Four-bit explorer — tap the bits</h4>
+<div class="bits" id="bits"><button class="bit">0</button><button class="bit">0</button><button class="bit">0</button><button class="bit">0</button></div>
+<div><span class="readout">BIN <span id="bout">0000</span> / DEC <span id="dout">0</span> / 2^4 = 16 (0–15)</span></div>
+<p class="small">Weights left to right: <b>8, 4, 2, 1</b>. So 0101 = 4+1 = <b>5</b>; 1010 = 8+2 = <b>10</b>. This exact conversion recurs in exams.</p>
+<table><tr><th>Unit</th><th>Size</th><th>Memory hook</th></tr>
+<tr><td>BIT</td><td>0 / 1</td><td>Smallest unit</td></tr><tr><td>NIBBLE</td><td>4 bits</td><td>Half a byte</td></tr><tr><td>BYTE</td><td>8 bits</td><td>About one character</td></tr><tr><td>KB / MB / GB / TB</td><td>each step x1024</td><td>1024 B = 1 KB; 1024 MB = 1 GB</td></tr></table>
+<div class="exam-tip"><b>Memorise:</b> 1 byte = 8 bits. 1 nibble = 4 bits. 3 bits = 8 patterns (000–111). 1010 = 10.</div>
+<p><button class="btn solid" data-note-done="c4">Mark note done</button></p></section>
+
+<section class="chapter" id="c5"><span class="fig">CHAPTER 5 / LEVEL 05</span><h3>ADC and DAC — bridges both ways</h3>
+<div class="chain"><span>SOUND</span><span>MIC</span><span>ANALOG</span><span>ADC</span><span>DATA TO PC</span></div>
+<div class="en">A microphone hears smooth sound. The <b>ADC samples it</b> — measuring the height thousands of times per second — and writes each measurement as numbers. Now the computer can store it. <b>Sampling always loses a little. That is the price.</b></div>
+<div class="ne">माइकले smooth आवाज सुन्छ। <b>ADC ले</b> छिनछिनमा नापेर (sampling) अंकमा लेख्छ।</div>
+<div class="chain"><span>DATA</span><span>DAC</span><span>ANALOG</span><span>SPEAKER</span><span>SOUND</span></div>
+<div class="en">Playback reverses it. The <b>DAC rebuilds</b> a smooth voltage from the numbers; the speaker shakes air. You hear music.</div>
+<div class="ne">बजाउँदा उल्टो — <b>DAC ले</b> अंकबाट smooth भोल्टेज बनाउँछ, स्पिकरले आवाज निकाल्छ।</div>
+<div class="exam-tip"><b>Never forget:</b> ADC = A to D = record IN. DAC = D to A = play OUT. रेकर्ड = ADC, बजाउने = DAC।</div>
+<div class="myth"><b>Common error:</b> swapping the two. Alphabet helps — <b>A</b> comes before <b>D</b>, and recording starts in the Analog world.</div>
+<p><button class="btn solid" data-note-done="c5">Mark note done</button></p></section>
+
+<section class="chapter" id="c6"><span class="fig">CHAPTER 6 / LEVEL 06</span><h3>Transmission — send it, survive noise</h3>
+<div class="chain"><span>SOURCE</span><span>ENCODE</span><span>SEND</span><span>CHANNEL</span><span>RECEIVE</span><span>DECODE TO EAR</span></div>
+<div class="en">Phone, radio, TV, internet — one skeleton. Voice becomes a signal, rides a <b>channel</b> (wire, air, fibre), and is rebuilt at the far end. <b>Noise</b> is junk added on the way. <b>Distortion</b> is the shape bent. Digital wins because it can be <b>regenerated and error-checked</b>.</div>
+<div class="ne">टेलिफोन, रेडियो, इन्टरनेट — खाका एउटै। <b>Noise</b> = बाटोमा थपिएको फोहोर, <b>distortion</b> = आकार बाङ्गिनु। Digital लाई regenerate + सच्याउन मिल्छ।</div>
+<div class="kv"><div><b>ANALOG CASES</b>Old radio, live voice, rotary phone, temperature sensor.</div><div><b>DIGITAL CASES</b>Laptop, phone call (ADC to packets to DAC), MP3, fibre network.</div><div><b>WHY DIGITAL WON</b>Process, store, send, copy exactly, fix. No generation loss like dubbing tapes.</div></div>
+<div class="darkbox"><canvas id="txScope"></canvas><p class="small" style="color:#a09a83">Clean steps survive the trip. Smooth waves pick up dirt.</p></div>
+<p><button class="btn solid" data-note-done="c6">Mark note done</button></p></section>
+
+<section class="chapter" id="c7"><span class="fig rust">CHEAT SHEET</span><h3>Difference table + 60-second strip</h3>
+<div style="overflow:auto"><table><tr><th>#</th><th>Analog</th><th>Digital</th></tr>
+<tr><td>Meaning</td><td>Continuously varying</td><td>Discrete levels, usually 0/1</td></tr>
+<tr><td>Values</td><td>Infinite in range</td><td>Two: HIGH / LOW</td></tr>
+<tr><td>Wave</td><td>Smooth sine</td><td>Square steps</td></tr>
+<tr><td>Noise</td><td>Distorts directly — damage sticks</td><td>Regenerable — errors fixable</td></tr>
+<tr><td>Store / process</td><td>Hard (tape), analog circuits</td><td>Easy (files), computers</td></tr>
+<tr><td>Examples</td><td>Voice, old radio/phone</td><td>PC, phone, MP3, digital TV</td></tr>
+<tr><td>Convert</td><td>To digital needs ADC</td><td>To analog needs DAC</td></tr></table></div>
+<div class="chain"><span>SIGNAL: change + info</span><span>ANALOG: continuous</span><span>DIGITAL: discrete</span><span>BINARY: 0/1</span><span>BIT 0/1, BYTE 8</span><span>ADC A-D, DAC D-A</span><span>n BITS = 2n</span></div>
+<p><a class="btn solid" href="levels.html">Notes done — Play Levels</a> <a class="btn paper" href="lab.html">Touch waves in Lab</a></p></section>
+</div>
+</div>
+</div>
+<div id="toast" role="status"></div>
+<footer><b>ONION SIGNAL LAB</b> / notes first, game second, exam last</footer>
+<script src="app.js?v=7"></script></body></html>

@@ -1,89 +1,54 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Onion Lab — Analog & Digital Signals · Class 10</title><link rel="stylesheet" href="style.css?v=3"></head>
-<body data-lang="both" class="scope">
+<title>Onion Signal Lab — Analog and Digital Signals, Class 10</title><link rel="stylesheet" href="style.css?v=7"></head>
+<body data-lang="both">
 <header class="top"><div class="top-in">
-<a class="mark" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#d7ff3e" stroke="#111309" stroke-width="2.5"/><path d="M20 6 C12 14 10 24 20 34 C30 24 28 14 20 6Z" fill="none" stroke="#111309" stroke-width="2.5"/><path d="M20 12 C15 18 14 25 20 30" fill="none" stroke="#ff4d1c" stroke-width="2.5"/></svg>
-<span><b>TEAM ONION · SIGNAL LAB</b><small>CLASS 10 · SCIENCE & TECH</small></span></a>
-<nav class="pages"><a href="index.html">Intro</a><a href="analog-digital.html">Signals</a><a href="lab.html">Lab</a><a href="binary.html">Binary</a><a href="converters.html">ADC·DAC</a><a href="transmission.html">Transmit</a><a href="quiz.html">Quiz</a><a href="exam.html">Exam</a></nav>
-<div class="tools"><div class="searchwrap"><input id="sin" type="search" placeholder="search…" aria-label="Search"><div id="sdrop"></div></div>
-<div class="lang"><button data-l="en">EN</button><button data-l="both" class="on">EN+NE</button><button data-l="ne">NE</button></div><button class="iconbtn" id="themeBtn" title="Toggle scope/paper mode" aria-label="Toggle dark mode">◐</button></div>
+<a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#d7ff3e" stroke="#16140b" stroke-width="2.5"/><path d="M20 6 C12 14 10 24 20 34 C30 24 28 14 20 6Z" fill="none" stroke="#16140b" stroke-width="2.5"/><path d="M20 12 C15 18 14 25 20 30" fill="none" stroke="#e14d1f" stroke-width="2.5"/></svg><span><b>ONION SIGNAL LAB</b><small>CLASS 10 / SCIENCE + TECH</small></span></a>
+<nav class="pages"><a href="index.html">Home</a><a href="learn.html">Notes</a><a href="levels.html">Levels</a><a href="lab.html">Lab</a><a href="quiz.html">Quiz</a><a href="exam.html">Exam</a></nav>
+<div class="top-right"><div class="xp-pill">XP <i id="xpVal">0 XP</i><span id="rankVal">Sprout</span></div>
+<div class="searchwrap"><input id="sin" type="search" placeholder="search…" aria-label="Search"><div id="sdrop"></div></div>
+<div class="lang"><button data-l="en">EN</button><button data-l="both" class="on">EN+NE</button><button data-l="ne">NE</button></div></div>
 </div></header>
 <div class="wrap">
 <div class="hero"><div class="hero-copy">
-<span class="k">FIG.00 — PEEL IT LAYER BY LAYER</span>
-<h1>ANALOG <em>&</em> DIGITAL SIGNALS</h1>
-<div class="ne-big">अनालग तथा डिजिटल सिग्नल — तह-तह खोल्दै बुझौं</div>
-<p class="lede">One lesson, zero fluff. Waves you can touch, bits you can flip, converters that actually make sense. Built by Team Onion for Class 10.</p>
+<span class="kicker">FIG.00 — PEEL IT LAYER BY LAYER</span>
+<h1>ANALOG <em>&amp;</em> DIGITAL SIGNALS</h1>
+<div class="ne-big">अनालग तथा डिजिटल सिग्नल — नोटबाट अभ्याससम्म, अभ्यासबाट परीक्षासम्म</div>
+<p class="lede">A structured course, not a slideshow. <b>1.</b> Watch the auto tutorial and tick the answers. <b>2.</b> Clear six levels in order. <b>3.</b> Sit the timed final. Progress and XP persist on this device.</p>
 <div class="type" id="typeline" aria-live="polite"></div>
-<div class="btnrow"><a class="btn solid" href="#path">Start Learning ↓</a><a class="btn ghost" href="lab.html">Open waveform lab</a></div>
-<div class="layermeter">LAYERS PEELED <span class="onion-dots">○○○○○○○○</span> <span class="layernum">0/8</span></div>
-</div><div class="scope"><canvas class="screen" id="heroA"></canvas>
-<div class="scope-cap"><span><span style="color:var(--lime)">—</span> ANALOG · smooth</span><span><span style="color:var(--rust)">—</span> DIGITAL · steps</span></div></div></div>
-<div class="ticker" aria-hidden="true"><div>ANALOG 〰 CONTINUOUS &nbsp;·&nbsp; DIGITAL ▓ 0 / 1 &nbsp;·&nbsp; ADC = RECORD IN &nbsp;·&nbsp; DAC = PLAY OUT &nbsp;·&nbsp; n BITS = 2ⁿ &nbsp;·&nbsp; HIGH = 1 · LOW = 0 &nbsp;·&nbsp; ANALOG 〰 CONTINUOUS &nbsp;·&nbsp; DIGITAL ▓ 0 / 1 &nbsp;·&nbsp; ADC = RECORD IN &nbsp;·&nbsp; DAC = PLAY OUT &nbsp;·&nbsp; n BITS = 2ⁿ &nbsp;·&nbsp; HIGH = 1 · LOW = 0 &nbsp;·&nbsp;</div></div>
+<div class="btnrow"><button class="btn solid" data-course>01 / Auto Tutorial</button><a class="btn ghost" href="levels.html">02 / Play Levels</a></div>
+<div class="hero-stats"><div class="stat"><b id="noteCount">0 / 6 notes</b><span>NOTES READ</span></div><div class="stat"><b id="lvlCount">0 / 6 levels</b><span>LEVELS CLEARED</span></div><div class="stat"><b id="xpVal">0 XP</b><span>TOTAL XP</span></div></div>
+</div><div class="hero-vis"><canvas class="screen" id="heroA"></canvas>
+<div class="scope-cap"><span><span style="color:var(--lime)">—</span> ANALOG / smooth</span><span><span style="color:var(--amber)">—</span> DIGITAL / steps</span></div>
+<p class="small" style="margin-top:10px;color:#8f8a76">Live oscilloscope. The same two waves this course teaches.</p></div></div>
+<div class="ticker" aria-hidden="true"><div>ANALOG — CONTINUOUS&nbsp;&nbsp;/&nbsp;&nbsp;DIGITAL — 0 / 1&nbsp;&nbsp;/&nbsp;&nbsp;ADC = RECORD IN&nbsp;&nbsp;/&nbsp;&nbsp;DAC = PLAY OUT&nbsp;&nbsp;/&nbsp;&nbsp;n BITS = 2n&nbsp;&nbsp;/&nbsp;&nbsp;HIGH = 1, LOW = 0&nbsp;&nbsp;/&nbsp;&nbsp;</div></div>
 
-<div class="panel" id="slides"><span class="fig">PRESENTATIONS — CLASS MODE</span><h2>First, the slides <span class="thin">then touch the waves</span></h2>
-<p class="small">6 slides, about 3 minutes. Arrows, dots, or swipe. Full detail lives in steps ①–⑤ below.</p>
-<div class="deck" data-deck><div class="deck-view"><div class="deck-track">
-<section class="slide"><span class="snum">SLIDE 1 / 6 — SIGNAL</span><h3>Signal = change that means something</h3>
-<p>A signal is a physical quantity that changes with time and carries information. Voice shakes air — that shaking pattern <i>is</i> the signal.</p>
-<p class="ne-line">सिग्नल = समयसँग बदलिने, सूचना बोक्ने भौतिक परिमाण।</p></section>
-<section class="slide"><span class="snum">SLIDE 2 / 6 — ANALOG</span><h3>Analog: smooth &amp; continuous 〰</h3>
-<p>Any value inside the range is allowed. Drawn as a smooth sine wave — natural voice, old radio. Peak = top, valley = bottom, amplitude = strength.</p>
-<p class="ne-line">लगातार परिवर्तन — जुनसुकै मान, smooth wave।</p></section>
-<section class="slide"><span class="snum">SLIDE 3 / 6 — DIGITAL</span><h3>Digital: fixed steps ▓</h3>
-<p>Only fixed levels — HIGH = 1, LOW = 0. Square-step waveform. This is what computers eat.</p>
-<p class="ne-line">Fixed मान मात्र — HIGH = 1, LOW = 0।</p></section>
-<section class="slide"><span class="snum">SLIDE 4 / 6 — BINARY</span><h3>Binary: only 0 and 1</h3>
-<p>1 bit = one digit. 8 bits = 1 byte. Exam rule: n bits → 2ⁿ combinations. 3 bits → 8.</p>
-<p class="ne-line">1 bit = एउटा अंक, 8 bit = 1 byte, n bit → 2ⁿ।</p></section>
-<section class="slide"><span class="snum">SLIDE 5 / 6 — ADC · DAC</span><h3>Bridges both ways</h3>
-<p>ADC: analog → digital (recording in). DAC: digital → analog (playing out). A→D in, D→A out.</p>
-<p class="ne-line">रेकर्ड = ADC, बजाउने = DAC।</p></section>
-<section class="slide"><span class="snum">SLIDE 6 / 6 — ON THE WIRE</span><h3>Send it, survive noise</h3>
-<p>Source → encode → channel → decode. Noise = junk added; distortion = shape bent. Digital can be regenerated and error-checked.</p>
-<p class="ne-line">Noise = फोहोर थपिनु; digital लाई सच्याउन मिल्छ।</p></section>
-</div></div>
-<div class="deck-bar"><button class="dbtn" data-prev type="button">← Prev</button><div class="dots" data-dots></div><span class="dcount" data-count>1 / 6</span><button class="dbtn" data-next type="button">Next →</button></div></div></div>
-
-<div class="panel"><span class="fig">LIVE WEBS</span><h2>Analog web · Digital web</h2>
-<p class="small">Same signals as the slides, alive. Left never stops smoothly; right only knows two steps.</p>
-<div class="grid2">
-<div class="darkbox">ANALOG WEB — smooth sine 〰<canvas class="screen" id="homeAna" style="height:170px"></canvas><p class="small" style="color:#b9bd9c">Continuous — volume knob, dimmer.</p></div>
-<div class="darkbox">DIGITAL WEB — square steps ▓<canvas class="screen" id="homeDig" style="height:170px"></canvas><p class="small" style="color:#b9bd9c">Discrete 0/1 — wall switch.</p></div>
-</div></div>
-
-<div class="panel" id="path"><span class="fig">THE PATH — 5 STEPS, THEN PROVE IT</span><h2>Learn in order <span class="thin">①→⑤ → quiz</span></h2>
-<p class="small">Open each layer, tick it done when it clicks. The quiz unlocks at 5/5. Progress saves on this device.</p>
-<div class="bar" style="margin-bottom:12px"><div class="bar-fill" id="pathfill" style="width:0%"></div></div>
-<p class="small" id="pathcount" style="font-family:var(--mono);font-weight:800">0 / 5 done</p>
-<div class="cards" id="pathcards">
-<div class="cardx" data-step="s1"><b>① Signals — smooth vs stepped</b><br><small>Analog + Digital + table · 10 min</small><div class="more">Knob vs switch. Peak, valley, HIGH, LOW.</div><p><a class="btn light" href="analog-digital.html">Open ① →</a> <button type="button" class="btn solid donebtn" data-d="s1">Mark done</button></p></div>
-<div class="cardx" data-step="s2"><b>② Waveform lab</b><br><small>Knobs: freq · ampl · speed · hear it · 8 min</small><div class="more">Wiggle one knob at a time. Freeze frames.</div><p><a class="btn light" href="lab.html">Open ② →</a> <button type="button" class="btn solid donebtn" data-d="s2">Mark done</button></p></div>
-<div class="cardx" data-step="s3"><b>③ Binary + bits</b><br><small>0/1 · 2ⁿ · byte ladder · 8 min</small><div class="more">Flip bits, watch decimal follow.</div><p><a class="btn light" href="binary.html">Open ③ →</a> <button type="button" class="btn solid donebtn" data-d="s3">Mark done</button></p></div>
-<div class="cardx" data-step="s4"><b>④ ADC · DAC</b><br><small>Record in · play out · 7 min</small><div class="more">A→D in, D→A out. Sampling costs a little.</div><p><a class="btn light" href="converters.html">Open ④ →</a> <button type="button" class="btn solid donebtn" data-d="s4">Mark done</button></p></div>
-<div class="cardx" data-step="s5"><b>⑤ Transmission</b><br><small>Source → channel → ear + noise · 7 min</small><div class="more">Phone, radio, fibre — same skeleton.</div><p><a class="btn light" href="transmission.html">Open ⑤ →</a> <button type="button" class="btn solid donebtn" data-d="s5">Mark done</button></p></div>
+<div class="panel"><span class="fig">HOW IT WORKS — THREE MOVES</span><h2>Learn <span class="thin">/ practise / prove</span></h2>
+<div class="steps">
+<div class="step-card"><b class="num">STEP 01</b><h3>Read the Notes</h3><p>Six short chapters, English + Nepali, with diagrams, tables and exam lines. Mark each done when it holds. No rushing — this is the teaching.</p><p><a class="btn solid" href="learn.html" style="margin-top:10px">Open Notes</a></p></div>
+<div class="step-card"><b class="num">STEP 02</b><h3>Clear 6 Levels</h3><p>Each level is a briefing, a hands-on task and a 3-question gate. Locked in order. 100–160 XP per level, only on a full clear.</p><p><a class="btn solid" href="levels.html" style="margin-top:10px">Play Levels</a></p></div>
+<div class="step-card"><b class="num">STEP 03</b><h3>Sit the Final</h3><p>20 questions, 15 minutes, graded with a certificate. Unlocks after all six levels. Pass mark 50%.</p><p><a class="btn solid" href="exam.html" id="examGate" style="margin-top:10px">Final Exam</a></p></div>
 </div>
-<div class="limebox" id="quizgate" style="margin-top:14px"><b style="font-family:var(--mono)">FINAL: 20 MCQs + flashcards</b><br><span class="small" id="gatemsg">Finish ①–⑤ to unlock the gate.</span><p><a class="btn solid" id="gatebtn" href="quiz.html" aria-disabled="true" style="opacity:.45;pointer-events:none">Quiz locked 🔒</a> <button type="button" class="btn light" id="pathreset">Reset path</button></p></div></div>
-
-<div class="panel"><span class="fig">FIG.01 — WHAT IS A SIGNAL?</span><h2>Signal = change <span class="thin">that means something</span></h2>
-<div class="en"><b>A signal is a physical quantity that changes with time and carries information.</b> Your voice shakes air. That shaking pattern <i>is</i> the signal. Same idea for voltage in a wire or brightness of light — change over time, carrying a message.</div>
-<div class="ne">सिग्नल भनेको <b>समयसँग परिवर्तन हुने भौतिक परिमाण हो जसले सूचना बोक्छ।</b> बोलेको आवाजले हावा हल्लाउँछ — त्यही हल्लिने pattern नै सिग्नल हो। तारको भोल्टेज वा बत्तीको उज्यालो पनि त्यसैगरी सूचना बोक्छ।</div>
-<div class="stickers"><span class="st">WHY NEEDED? → info has to travel</span><span class="st">किन चाहिन्छ? → सूचना पुर्‍याउन</span></div>
-<div class="cards">
-<div class="cardx" tabindex="0" data-toggle><b>🔊 Sound</b><div class="more">Air pressure wobbling over time. बोल्दाको हावा।</div></div>
-<div class="cardx" tabindex="0" data-toggle><b>⚡ Voltage</b><div class="more">Electric level rising/falling in a wire.</div></div>
-<div class="cardx" tabindex="0" data-toggle><b>💡 Light</b><div class="more">Brightness changing — remote, fibre.</div></div>
-<div class="cardx" tabindex="0" data-toggle><b>📡 Radio wave</b><div class="more">Invisible EM wave shaped by voice/music.</div></div>
+<div style="margin-top:14px"><div class="bar"><div class="bar-fill" id="pathfill"></div></div><div class="progress-row"><span id="lvlCount">0 / 6 levels</span><span id="pathPct">0%</span></div></div>
 </div>
-<h3>The route, always the same</h3>
-<div class="chain"><span>INFO</span><span>→ SIGNAL</span><span>→ TRAVEL</span><span>→ RECEIVE</span><span>→ INFO BACK</span></div>
-<div class="darkbox"><canvas id="chainScope"></canvas><p class="small" style="color:#b9bd9c">Onion rule #1: if nothing changes with time, it's not a signal. It's just a value sitting there.</p></div>
+
+<div class="panel"><span class="fig lime">THE PATH — SIX LEVELS</span><h2>Course map <span class="thin">unlocks in order</span></h2>
+<p class="small">Same order as the exam. Full briefings live on the Levels page.</p>
+<div class="path">
+<div class="lvl" data-level="L1"><span class="status">OPEN</span><span class="lv-tag">LEVEL 01</span><h3>What is a Signal?</h3><p>Change that means something. Info, signal, travel, receive.</p><div class="lvl-meta"><span class="chip xp">+100 XP</span><span class="chip">Notes Ch.1</span></div></div>
+<div class="lvl" data-level="L2"><span class="status">LOCKED</span><span class="lv-tag">LEVEL 02</span><h3>Analog — Smooth</h3><p>Continuous wave: peak, valley, amplitude, frequency.</p><div class="lvl-meta"><span class="chip xp">+120 XP</span><span class="chip">Notes Ch.2</span></div></div>
+<div class="lvl" data-level="L3"><span class="status">LOCKED</span><span class="lv-tag">LEVEL 03</span><h3>Digital — Steps</h3><p>HIGH = 1, LOW = 0. Switch, lamp and square wave.</p><div class="lvl-meta"><span class="chip xp">+120 XP</span><span class="chip">Notes Ch.3</span></div></div>
+<div class="lvl" data-level="L4"><span class="status">LOCKED</span><span class="lv-tag">LEVEL 04</span><h3>Binary + Bits</h3><p>Flip bits, read decimals. n bits gives 2n combinations.</p><div class="lvl-meta"><span class="chip xp">+150 XP</span><span class="chip">Notes Ch.4</span></div></div>
+<div class="lvl" data-level="L5"><span class="status">LOCKED</span><span class="lv-tag">LEVEL 05</span><h3>ADC / DAC Bridges</h3><p>Record in (A to D), play out (D to A). Sampling.</p><div class="lvl-meta"><span class="chip xp">+150 XP</span><span class="chip">Notes Ch.5</span></div></div>
+<div class="lvl" data-level="L6"><span class="status">LOCKED</span><span class="lv-tag">LEVEL 06</span><h3>Transmission</h3><p>Source to ear across a channel. Noise vs distortion.</p><div class="lvl-meta"><span class="chip xp">+160 XP</span><span class="chip">Notes Ch.6</span></div></div>
+</div>
+<p><a class="btn solid" href="levels.html">Open Levels</a> <a class="btn paper" href="lab.html">Touch waves in Lab</a></p>
 </div>
 
 <div class="grid2">
-<div class="panel"><span class="fig">NEXT</span><h2>Two flavours</h2><p class="small">Smooth vs stepped. Knob vs switch. That's the whole game.</p><p><a class="btn solid" href="analog-digital.html">Analog vs Digital →</a></p></div>
-<div class="panel"><span class="fig">STUCK?</span><h2>Exam in a hurry</h2><p class="small">One-page answers + 1-minute revision sheet.</p><p><a class="btn light" href="exam.html">Jump to Exam →</a></p></div>
+<div class="panel"><span class="fig">WHY NOTES FIRST</span><h2>Order matters.</h2><p class="small">Quizzing before understanding produces fragile marks. Every gate question in Levels 01–06 is drawn from the Notes pages, and every question locks after one attempt with the explanation shown. Read, do, then prove.</p></div>
+<div class="panel"><span class="fig rust">FOR CLASSROOMS</span><h2>Project it.</h2><p class="small"><b>Notes</b> projects cleanly for a 30-minute lesson. <b>Levels</b> works as homework — the lock order enforces the sequence. <b>Exam</b> runs the test. No login, no network needed after first load.</p><p><a class="btn dark" href="learn.html">Project Notes</a></p></div>
 </div>
 </div>
-<footer><b>TEAM ONION</b> · Class 10 Science & Tech · Analog & Digital Signals<br>peel · understand · practise · master — made for students 🇳🇵</footer>
+<div id="stamp" aria-hidden="true"><span id="stampTxt">CORRECT</span></div><div id="toast" role="status"></div>
+<footer><b>ONION SIGNAL LAB</b> / Class 10 Science + Tech / peel, understand, practise, master<br><span style="opacity:.7">Progress saves on this device / <a href="#" id="resetAll" style="color:inherit">reset all</a></span></footer>
 <script src="app.js?v=7"></script></body></html>
